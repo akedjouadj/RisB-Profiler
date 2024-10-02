@@ -45,7 +45,7 @@ data, X, label2players_name, players_name2label, label2players_club, label2playe
 
 # Function to calculate similarity
 @st.cache_data
-def get_similar_players(player_name, n_similar=5, excluded_positions='Goalkeeper', min_matches=1, selected_competitions=None):
+def get_similar_players(player_name, n_similar=5, excluded_positions='Goalkeeper', min_matches=10, selected_competitions=None):
     idx = players_name2label[player_name]
     player_embedding = X[idx].reshape(1, -1)
     
@@ -85,7 +85,7 @@ st.sidebar.title("Football Player Retrieval")
 player_of_interest = st.sidebar.selectbox("Select a player:", list(label2players_name.values()))
 n_similar_players = st.sidebar.slider("Number of similar players:", min_value=5, max_value=50, value=5)
 excluded_positions = st.sidebar.multiselect("Exclude positions:", all_positions, default = ['Goalkeeper'])
-min_matches = st.sidebar.slider("Minimum number of matches played:", min_value=1, max_value=10, value=1)
+min_matches = st.sidebar.slider("Minimum number of matches played:", min_value=1, max_value=20, value=1)
 selected_competitions = st.sidebar.multiselect("Select competitions:", all_competitions)  # New filter for competitions
 validate = st.sidebar.button("Validate")
 
