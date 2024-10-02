@@ -85,7 +85,7 @@ def plot_player_stats(player_data, player_name):
 
 # Global stats page function
 def global_stats_page():
-    st.title("Global Dataset Statistics")
+    st.title("Global Dataset Statistics Used to Train the Model Behind the App")
     
     # Remove duplicates based on match_id to count each match only once
     data_unique_matches = data.drop_duplicates(subset=['match_id'])

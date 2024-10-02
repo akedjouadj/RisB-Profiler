@@ -128,3 +128,17 @@ if st.session_state.run_search:
     if st.button("Reset Search"):
         st.session_state.run_search = False
         st.experimental_rerun()
+
+# survery to share impressions
+survey_url = "https://docs.google.com/forms/d/e/1FAIpQLSdIo7cXsc88jjwagytWk3Xb6drDsOyu7AYXYKvx5pZVNuON8Q/viewform?usp=pp_url"
+
+st.markdown(
+    f"""
+    <div style='text-align: right; position: fixed; bottom: 10px; right: 10px;'>
+        <a href="{survey_url}" target="_blank" style='color: blue; text-decoration: none; font-size: 16px;'>
+        🚀 Share your impressions here!
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
