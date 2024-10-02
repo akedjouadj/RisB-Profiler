@@ -85,7 +85,7 @@ st.sidebar.title("Football Player Retrieval")
 player_of_interest = st.sidebar.selectbox("Select a player:", list(label2players_name.values()))
 n_similar_players = st.sidebar.slider("Number of similar players:", min_value=5, max_value=50, value=5)
 excluded_positions = st.sidebar.multiselect("Exclude positions:", all_positions, default = ['Goalkeeper'])
-min_matches = st.sidebar.slider("Minimum number of matches played:", min_value=1, max_value=20, value=1)
+min_matches = st.sidebar.slider("Minimum number of matches played:", min_value=1, max_value=20, value=10)
 selected_competitions = st.sidebar.multiselect("Select competitions:", all_competitions)  # New filter for competitions
 validate = st.sidebar.button("Validate")
 
