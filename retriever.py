@@ -142,17 +142,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# app repo url
-repo_link = "https://github.com/akedjouadj/RisB-Profiler"
-
-st.markdown(
-    f"""
-    <div style='text-align: left; position: fixed; bottom: 10px; left: 10px;'>
-        <a href="{repo_link}" target="_blank" style='color: blue; text-decoration: none; font-size: 16px;'>
-        🚀 Contribute!
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
