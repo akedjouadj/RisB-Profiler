@@ -91,7 +91,7 @@ validate = st.sidebar.button("Validate")
 
 # Main app title
 st.title("RisB-Profiler, Find the Player You Really need!")
-st.write("**For clubs, scouts, analysts, and fans !**")
+st.markdown("**For clubs, scouts, analysts, and fans, powered by [RisingBALLER](https://github.com/akedjouadj/risingBALLER)!**")
 
 # Store the state of the app
 if 'run_search' not in st.session_state:
@@ -137,6 +137,20 @@ st.markdown(
     <div style='text-align: right; position: fixed; bottom: 10px; right: 10px;'>
         <a href="{survey_url}" target="_blank" style='color: blue; text-decoration: none; font-size: 16px;'>
         🚀 Share your impressions here!
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# app repo url
+repo_link = "https://github.com/akedjouadj/RisB-Profiler"
+
+st.markdown(
+    f"""
+    <div style='text-align: left; position: fixed; bottom: 10px; left: 10px;'>
+        <a href="{repo_link}" target="_blank" style='color: blue; text-decoration: none; font-size: 16px;'>
+        🚀 Contribute!
         </a>
     </div>
     """,
